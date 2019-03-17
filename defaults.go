@@ -107,6 +107,9 @@ var themes = map[string]Theme{
 		DockerMachineFg: 177, // light purple
 		DockerMachineBg: 55,  // purple
 
+		GcloudFg: 15,
+		GcloudBg: 26,
+
 		KubeClusterFg:   117,
 		KubeClusterBg:   26,
 		KubeNamespaceFg: 170,
@@ -171,7 +174,7 @@ var themes = map[string]Theme{
 		NodeBg: 40,
 
 		LoadFg:           00,
-		LoadBg:           47,
+		LoadBg:           41,
 		LoadHighBg:       161,
 		LoadAvgValue:     5,
 		LoadThresholdBad: 1.0,

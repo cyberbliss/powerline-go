@@ -112,6 +112,7 @@ var modules = map[string]func(*powerline){
 	"gitlite":             segmentGitLite,
 	"hg":                  segmentHg,
 	"svn":                 segmentSubversion,
+	"gcloud":              segmentGcloud,
 	"host":                segmentHost,
 	"jobs":                segmentJobs,
 	"kube":                segmentKube,

@@ -21,7 +21,7 @@ git commit -m "commit";
 echo "test">file1;
 git stash;
 
-export HOME=/tmp/home/
+#export HOME=/tmp/home/
 
 clear;
 
@@ -35,7 +35,7 @@ echo badcmd;
 echo "bash: badcmd: command not found";
 
 $_pgo -shell bare $FLAGS -error 1;
-echo "cd ~/deep/down/into/the/abyss/of/directories/where/no/one/ever/comes/";
+echo "cd /tmp/home/deep/down/into/the/abyss/of/directories/where/no/one/ever/comes/";
 cd /tmp/home/deep/down/into/the/abyss/of/directories/where/no/one/ever/comes/;
 
 $_pgo -shell bare $FLAGS;
@@ -49,9 +49,9 @@ if hash terraform 2>/dev/null; then
 fi
 
 echo ""
-cd $HOME
+cd /tmp/home
 
-$_pgo -shell bare -newline -modules user,cwd,perms,git,load,exit,root
+$_pgo -shell bare -newline -modules user,cwd,perms,git,load,gcloud,exit,root
 rm -rf /tmp/home;
 
 echo;echo;
