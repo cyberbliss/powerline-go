@@ -33,7 +33,7 @@ func segmentGcloud(p *powerline) {
 	}
 
 	path := path.Join(homePath(), ".config", "gcloud", "configurations", "config_"+configFile)
-	fmt.Println(path)
+
 	cfg, err := ini.Load(path)
 	if err != nil {
 		return
