@@ -110,6 +110,9 @@ var themes = map[string]Theme{
 		GcloudFg: 15,
 		GcloudBg: 26,
 
+		MemFg: 00,
+		MemBg: 220,
+
 		KubeClusterFg:   117,
 		KubeClusterBg:   26,
 		KubeNamespaceFg: 170,

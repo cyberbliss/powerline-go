@@ -51,7 +51,7 @@ fi
 echo ""
 cd /tmp/home
 
-$_pgo -shell bare -newline -modules user,cwd,perms,git,load,gcloud,exit,root
+$_pgo -shell bare -newline -modules user,cwd,perms,git,mem,load,gcloud,exit,root
 rm -rf /tmp/home;
 
 echo;echo;
