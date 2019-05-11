@@ -81,8 +81,8 @@ var themes = map[string]Theme{
 	"default": {
 		Reset: 0xFF,
 
-		UsernameFg:     250,
-		UsernameBg:     240,
+		UsernameFg:     214,
+		UsernameBg:     232,
 		UsernameRootBg: 124,
 
 		HostnameFg: 250,
@@ -106,6 +106,12 @@ var themes = map[string]Theme{
 
 		DockerMachineFg: 177, // light purple
 		DockerMachineBg: 55,  // purple
+
+		GcloudFg: 15,
+		GcloudBg: 26,
+
+		MemFg: 00,
+		MemBg: 220,
 
 		KubeClusterFg:   117,
 		KubeClusterBg:   26,
@@ -170,8 +176,8 @@ var themes = map[string]Theme{
 		NodeFg: 15,
 		NodeBg: 40,
 
-		LoadFg:           15,
-		LoadBg:           22,
+		LoadFg:           00,
+		LoadBg:           41,
 		LoadHighBg:       161,
 		LoadAvgValue:     5,
 		LoadThresholdBad: 1.0,
