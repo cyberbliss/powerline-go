@@ -89,6 +89,8 @@ if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
 fi
 ```
 
+Currently, right prompt support is not available when using bash.
+
 ### ZSH
 
 Add the following to your `.zshrc`:
@@ -227,7 +229,7 @@ Add the following to your `.bashrc` (or `.profile` on Mac):
 
 ```bash
 function _update_ps1() {
-    eval "$($GOPATH/bin/powerline-go -error $? -eval -modules-right git)"
+    eval "$($GOPATH/bin/powerline-go -error $? -shell bash -eval -modules-right git)"
 }
 
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
@@ -260,13 +262,7 @@ fi
 
 ##### Fish
 
-Redefine `fish_prompt` in `~/.config/fish/config.fish`:
-
-```bash
-function fish_prompt
-    eval $GOPATH/bin/powerline-go -error $status -shell bare -eval -modules-right git
-end
-```
+Eval mode (and `modules-right` support) for Fish is not currently available.
 
 ### Path Aliases
 

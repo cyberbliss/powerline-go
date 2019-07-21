@@ -326,7 +326,7 @@ func (p *powerline) draw() string {
 		buffer.WriteRune('\n')
 
 		var foreground, background uint8
-		if *p.args.PrevError == 0 {
+		if *p.args.PrevError == 0 || *p.args.StaticPromptIndicator {
 			foreground = p.theme.CmdPassedFg
 			background = p.theme.CmdPassedBg
 		} else {
@@ -351,8 +351,11 @@ func (p *powerline) draw() string {
 		switch p.align {
 		case alignLeft:
 			buffer.WriteString(p.shellInfo.evalPromptSuffix)
-			if p.hasRightModules() {
+			if p.supportsRightModules() {
 				buffer.WriteRune('\n')
+				if !p.hasRightModules() {
+					buffer.WriteString(p.shellInfo.evalPromptRightPrefix + p.shellInfo.evalPromptRightSuffix)
+				}
 			}
 		case alignRight:
 			if p.supportsRightModules() {
