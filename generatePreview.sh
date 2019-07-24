@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FLAGS="-modules cwd,git,root"
+FLAGS="-mode lucinda -modules cwd,git,root"
 _currdir=$(PWD)
 _pgo=$_currdir/release/powerline-go
 
@@ -51,7 +51,7 @@ fi
 echo ""
 cd /tmp/home
 
-$_pgo -shell bare -newline -modules user,cwd,perms,git,mem,load,gcloud,exit,root
+$_pgo -shell bare -mode lucinda -newline -modules user,cwd,perms,git,mem,load,gcloud,exit,root
 rm -rf /tmp/home;
 
 echo;echo;

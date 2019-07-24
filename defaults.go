@@ -45,6 +45,23 @@ var symbolTemplates = map[string]Symbols{
 		RepoConflicted: "\u273C",
 		RepoStashed:    "\u2691",
 	},
+	"lucinda": {
+		Lock:                 "RO",
+		Network:              "SSH",
+		Separator:            "\u25BA",
+		SeparatorThin:        "\u203A",
+		SeparatorReverse:     "\u25C4",
+		SeparatorReverseThin: "\u2039",
+
+		RepoDetached:   "\u2021", //double dagger
+		RepoAhead:      "\u2191", //up arrow
+		RepoBehind:     "\u2193", //down arrow
+		RepoStaged:     "\u2302", //house
+		RepoNotStaged:  "\u203C", //double !!
+		RepoUntracked:  "+",
+		RepoConflicted: "*",      //asterisk
+		RepoStashed:    "\u2663", //flag
+	},
 }
 
 var shellInfos = map[string]ShellInfo{
@@ -121,7 +138,7 @@ var themes = map[string]Theme{
 		DotEnvFg: 15, // white
 		DotEnvBg: 55, // purple
 
-		AWSFg: 15, // white
+		AWSFg: 15,  // white
 		AWSBg: 172, // AWS orange
 
 		RepoCleanFg: 0,   // black
