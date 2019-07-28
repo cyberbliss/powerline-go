@@ -310,8 +310,11 @@ func (p *powerline) draw() string {
 	}
 
 	if *p.args.PromptOnNewLine {
-		buffer.WriteRune('╭')
-		buffer.WriteRune('─')
+		buffer.WriteString(p.fgColor(15))
+		//buffer.WriteRune('╭')
+		//buffer.WriteRune('─')
+		buffer.WriteRune(p.symbolTemplates.DownRight)
+		buffer.WriteRune(p.symbolTemplates.HorizontalLine)
 	}
 
 	for rowNum := range p.Segments {
@@ -333,9 +336,11 @@ func (p *powerline) draw() string {
 			foreground = p.theme.CmdFailedFg
 			background = p.theme.CmdFailedBg
 		}
-
-		buffer.WriteRune('╰')
-		buffer.WriteRune('─')
+		buffer.WriteString(p.fgColor(15))
+		//buffer.WriteRune('╰')
+		//buffer.WriteRune('─')
+		buffer.WriteRune(p.symbolTemplates.UpRight)
+		buffer.WriteRune(p.symbolTemplates.HorizontalLine)
 		buffer.WriteString(p.fgColor(foreground))
 		buffer.WriteString(p.bgColor(background))
 		buffer.WriteRune(' ')

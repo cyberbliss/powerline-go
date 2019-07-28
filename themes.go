@@ -8,6 +8,17 @@ type Symbols struct {
 	SeparatorReverse     string
 	SeparatorReverseThin string
 
+	Dotenv string
+
+	Cloud string
+
+	Load string
+	Mem  string
+
+	Node string
+
+	Kube string
+
 	RepoDetached   string
 	RepoAhead      string
 	RepoBehind     string
@@ -16,6 +27,10 @@ type Symbols struct {
 	RepoUntracked  string
 	RepoConflicted string
 	RepoStashed    string
+
+	HorizontalLine rune
+	DownRight      rune
+	UpRight        rune
 }
 
 type Theme struct {

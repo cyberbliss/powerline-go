@@ -100,7 +100,7 @@ func segmentKube(p *powerline) {
 	if cluster != "" {
 		kubeIconHasBeenDrawnYet = true
 		p.appendSegment("kube-cluster", segment{
-			content:    fmt.Sprintf("⎈ %s", cluster),
+			content:    fmt.Sprintf("%s %s", p.symbolTemplates.Kube, cluster),
 			foreground: p.theme.KubeClusterFg,
 			background: p.theme.KubeClusterBg,
 		})
@@ -109,7 +109,7 @@ func segmentKube(p *powerline) {
 	if namespace != "" {
 		content := namespace
 		if !kubeIconHasBeenDrawnYet {
-			content = fmt.Sprintf("⎈ %s", content)
+			content = fmt.Sprintf("%s %s", p.symbolTemplates.Kube, content)
 		}
 		p.appendSegment("kube-namespace", segment{
 			content:    content,

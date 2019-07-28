@@ -147,7 +147,7 @@ fi
 There are a few optional arguments which can be seen by running
 `powerline-go -help`. These can be used by changing the command you have set
 in your shell’s init file.
-
+powerline-go works best with a font that has been patched with Powerline icons (see here for a collection of such fonts: https://www.nerdfonts.com/). However, for those circumstances where it's not possible to use a patched font in your terminal (looking at you Windows terminal programs) use mode option 'nopowerline', i.e. `-mode nopowerline`; this uses a more compatible set of glyphs.
 ```
 Usage of powerline-go:
   -colorize-hostname
@@ -179,7 +179,7 @@ Usage of powerline-go:
     	 Maximum width of the shell that the prompt may use, in percent. Setting this to 0 disables the shrinking subsystem.
   -mode string
     	 The characters used to make separators between segments.
-    	 (valid choices: patched, compatible, flat)
+    	 (valid choices: patched, nopowerline)
     	 (default "patched")
   -modules string
     	 The list of modules to load, separated by ','

@@ -1,23 +1,6 @@
 package main
 
 var symbolTemplates = map[string]Symbols{
-	"compatible": {
-		Lock:                 "RO",
-		Network:              "SSH",
-		Separator:            "\u25B6",
-		SeparatorThin:        "\u276F",
-		SeparatorReverse:     "\u25C0",
-		SeparatorReverseThin: "\u276E",
-
-		RepoDetached:   "\u2693",
-		RepoAhead:      "\u2B06",
-		RepoBehind:     "\u2B07",
-		RepoStaged:     "\u2714",
-		RepoNotStaged:  "\u270E",
-		RepoUntracked:  "+",
-		RepoConflicted: "\u273C",
-		RepoStashed:    "\u2691",
-	},
 	"patched": {
 		Lock:                 "\uE0A2",
 		Network:              "\uE0A2",
@@ -26,6 +9,17 @@ var symbolTemplates = map[string]Symbols{
 		SeparatorReverse:     "\uE0B2",
 		SeparatorReverseThin: "\uE0B3",
 
+		Dotenv: "\u2235",
+
+		Cloud: "\uF65E ",
+
+		Load: "\uF437",
+		Mem:  "\uF799",
+
+		Node: "\u2B22",
+
+		Kube: "⎈",
+
 		RepoDetached:   "\u2693",
 		RepoAhead:      "\u2B06",
 		RepoBehind:     "\u2B07",
@@ -34,16 +28,42 @@ var symbolTemplates = map[string]Symbols{
 		RepoUntracked:  "+",
 		RepoConflicted: "\u273C",
 		RepoStashed:    "\u2691",
+
+		HorizontalLine: '─',
+		DownRight:      '╭',
+		UpRight:        '╰',
 	},
-	"flat": {
-		RepoDetached:   "\u2693",
-		RepoAhead:      "\u2B06",
-		RepoBehind:     "\u2B07",
-		RepoStaged:     "\u2714",
-		RepoNotStaged:  "\u270E",
+	"nopowerline": {
+		Lock:                 "RO",
+		Network:              "SSH",
+		Separator:            "\u25BA",
+		SeparatorThin:        "\u203A",
+		SeparatorReverse:     "\u25C4",
+		SeparatorReverseThin: "\u2039",
+
+		Dotenv: "\u00CB",
+
+		Cloud: "\u25D8",
+
+		Load: "Ld:",
+		Mem:  "M:",
+
+		Node: "\u25D8",
+
+		Kube: "k8s:",
+
+		RepoDetached:   "\u2021", //double dagger
+		RepoAhead:      "\u2191", //up arrow
+		RepoBehind:     "\u2193", //down arrow
+		RepoStaged:     "\u2302", //house
+		RepoNotStaged:  "\u203C", //double !!
 		RepoUntracked:  "+",
-		RepoConflicted: "\u273C",
-		RepoStashed:    "\u2691",
+		RepoConflicted: "*",      //asterisk
+		RepoStashed:    "\u25CA", //flag
+
+		HorizontalLine: '\u2500',
+		DownRight:      '\u250C',
+		UpRight:        '\u2514',
 	},
 }
 
@@ -121,7 +141,7 @@ var themes = map[string]Theme{
 		DotEnvFg: 15, // white
 		DotEnvBg: 55, // purple
 
-		AWSFg: 15, // white
+		AWSFg: 15,  // white
 		AWSBg: 172, // AWS orange
 
 		RepoCleanFg: 0,   // black

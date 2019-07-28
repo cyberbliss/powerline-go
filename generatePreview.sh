@@ -1,7 +1,7 @@
 #!/bin/sh
 
-FLAGS="-modules cwd,git,root"
-_currdir=$(PWD)
+FLAGS="-mode nopowerline -modules cwd,git,root,gcloud"
+_currdir=$(pwd)
 _pgo=$_currdir/release/powerline-go
 
 mkdir -p /tmp/home/code/dotfiles;
@@ -51,7 +51,9 @@ fi
 echo ""
 cd /tmp/home
 
-$_pgo -shell bare -newline -modules user,cwd,perms,git,mem,load,gcloud,exit,root
+$_pgo -shell bare -mode nopowerline -newline -modules user,cwd,perms,git,mem,load,gcloud,exit,root,kube
+echo;
+$_pgo -shell bare -newline -modules user,cwd,perms,git,mem,load,gcloud,exit,root,kube
 rm -rf /tmp/home;
 
 echo;echo;
