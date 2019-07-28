@@ -2,9 +2,9 @@
 
 A [Powerline](https://github.com/Lokaltog/vim-powerline) like prompt for Bash,
 ZSH and Fish. Based on [Powerline-Shell](https://github.com/banga/powerline-shell) by @banga.
-Ported to golang by @justjanne.
+Forked from this lovely version: (https://github.com/justjanne/powerline-go).
 
-![Solarized+Powerline](https://raw.github.com/justjanne/powerline-go/master/preview.png)
+![Solarized+Powerline](https://raw.github.com/cyberbliss/powerline-go/master/preview.png)
 
 - Shows some important details about the git/hg branch (see below)
 - Changes color if the last command exited with a failure code
@@ -56,19 +56,19 @@ If you want to use the "patched" mode (which is the default, and provides
 improved UI), you'll need to install a powerline font, either as fallback,
 or by patching the font you use for your terminal: see
 [powerline-fonts](https://github.com/Lokaltog/powerline-fonts).  
-Alternatively you can use "compatible" or "flat" mode.
+Alternatively you can use "nopowerline" mode.
 
 ### Precompiled Binaries
 
 I provide precompiled binaries for x64 Linux and macOS in the
-[releases tab](https://github.com/justjanne/powerline-go/releases)
+[releases tab](https://github.com/cyberbliss/powerline-go/releases)
 
 ### Other Platforms
 
 - Install (and update) the package with
 
 ```bash
-go get -u github.com/justjanne/powerline-go
+go get -u github.com/cyberbliss/powerline-go
 ```
 
 - By default it will be in `$GOPATH/bin`, if you want to change that, you can set
@@ -273,7 +273,7 @@ terminal width, even when some portions are replaced by an ellipsis.
 
 For example, you might want to replace the string `$GOPATH/src/github.com` with
 `@GOPATH-GH`. When you're in a directory like
-`$GOPATH/src/github.com/justjanne/powerline-go`, you'll instead see `@GOPATH-GH >
+`$GOPATH/src/github.com/cyberbliss/powerline-go`, you'll instead see `@GOPATH-GH >
 justjanne > powerline-go` in the shell prompt.
 
 Aliases are defined as comma-separated key value pairs, like this:
