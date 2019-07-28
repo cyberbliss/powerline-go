@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"os"
 )
@@ -21,7 +22,7 @@ func segmentNode(p *powerline) {
 			err = json.Unmarshal(raw, &pkg)
 			if err == nil {
 				p.appendSegment("node-version", segment{
-					content:    pkg.Version + " \u2B22",
+					content:    fmt.Sprintf("%s %s", pkg.Version, p.symbolTemplates.Node),
 					foreground: p.theme.NodeFg,
 					background: p.theme.NodeBg,
 				})

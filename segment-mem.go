@@ -20,7 +20,7 @@ func segmentMem(p *powerline) {
 	}
 
 	p.appendSegment("mem", segment{
-		content:    fmt.Sprintf("\uF799 %.2fG", float64(m.Available)/float64(div)),
+		content:    fmt.Sprintf("%s %.2fG", p.symbolTemplates.Mem, float64(m.Available)/float64(div)),
 		foreground: p.theme.MemFg,
 		background: p.theme.MemBg,
 	})

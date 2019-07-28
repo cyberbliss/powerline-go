@@ -41,7 +41,7 @@ func segmentGcloud(p *powerline) {
 	gcloudProject := cfg.Section("core").Key("project").String()
 
 	if gcloudProject != "" {
-		content := fmt.Sprintf("\uF65E  %s", gcloudProject)
+		content := fmt.Sprintf("%s %s", p.symbolTemplates.Cloud, gcloudProject)
 		p.appendSegment("gcloud", segment{
 			content:    content,
 			foreground: p.theme.GcloudFg,

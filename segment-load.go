@@ -28,7 +28,7 @@ func segmentLoad(p *powerline) {
 	}
 
 	p.appendSegment("load", segment{
-		content:    fmt.Sprintf("\uF437  %.2f", a.Load5),
+		content:    fmt.Sprintf("%s  %.2f", p.symbolTemplates.Load, a.Load5),
 		foreground: p.theme.LoadFg,
 		background: bg,
 	})

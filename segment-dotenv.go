@@ -16,7 +16,7 @@ func segmentDotEnv(p *powerline) {
 	}
 	if dotEnv {
 		p.appendSegment("dotenv", segment{
-			content:    "\u2235",
+			content:    p.symbolTemplates.Dotenv,
 			foreground: p.theme.DotEnvFg,
 			background: p.theme.DotEnvBg,
 		})
