@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FLAGS="-mode nopowerline -modules cwd,git,root,gcloud"
+FLAGS="-modules cwd,git,gcloud,root"
 _currdir=$(pwd)
 _pgo=$_currdir/release/powerline-go
 
@@ -51,9 +51,9 @@ fi
 echo ""
 cd /tmp/home
 
-$_pgo -shell bare -mode nopowerline -newline -modules user,cwd,perms,git,mem,load,gcloud,exit,root,kube
+$_pgo -shell bare -mode nopowerline -newline -modules user,cwd,perms,git,mem,load,gcloud,kube,exit,root -shorten-gke-names
 echo;
-$_pgo -shell bare -newline -modules user,cwd,perms,git,mem,load,gcloud,exit,root,kube
+$_pgo -shell bare -newline -modules user,cwd,perms,git,mem,load,gcloud,kube,exit,root -shorten-gke-names
 rm -rf /tmp/home;
 
 echo;echo;

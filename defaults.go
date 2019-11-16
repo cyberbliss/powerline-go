@@ -133,8 +133,8 @@ var themes = map[string]Theme{
 		MemFg: 00,
 		MemBg: 220,
 
-		KubeClusterFg:   117,
-		KubeClusterBg:   26,
+		KubeClusterFg:   22,
+		KubeClusterBg:   214,
 		KubeNamespaceFg: 170,
 		KubeNamespaceBg: 17,
 

@@ -24,6 +24,7 @@ Forked from this lovely version: (https://github.com/justjanne/powerline-go).
   - [Fish](#fish)
   - [Nix](#nix)
 - [Customization](#customization)
+- [Development](#development)
 - [License](#license)
 
 ## Version Control
@@ -355,6 +356,14 @@ function fish_prompt
     $GOPATH/bin/powerline-go -modules duration -duration $duration -error $status -shell bare
 end
 ```
+## Development
+Clone this repo.  
+Currently no dependencies manager is used so need to `go get -u` the following:  
+- github.com/mattn/go-runewidth
+- 
+
+If you want to change the colours this page has a useful colour chart: https://medium.com/@inhereat/terminal-color-rendering-tool-library-support-8-16-colors-256-colors-by-golang-a68fb8deee86.
+The default colours are defined in defaults.go
 
 ## License
 
