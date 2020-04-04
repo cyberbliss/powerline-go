@@ -17,3 +17,4 @@ powerline-go
 /.idea/
 release/*
 /.project
+/dist

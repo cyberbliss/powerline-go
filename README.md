@@ -25,6 +25,7 @@ Forked from this lovely version: (https://github.com/justjanne/powerline-go).
   - [Nix](#nix)
 - [Customization](#customization)
 - [Development](#development)
+- [Releasing](#releasing)
 - [License](#license)
 
 ## Version Control
@@ -63,6 +64,11 @@ Alternatively you can use "nopowerline" mode.
 
 I provide precompiled binaries for x64 Linux and macOS in the
 [releases tab](https://github.com/cyberbliss/powerline-go/releases)
+
+### Homebrew
+```shell script
+brew install cyberbliss/tap/powerline-go
+```
 
 ### Other Platforms
 
@@ -358,13 +364,13 @@ end
 ```
 ## Development
 Clone this repo.  
-Currently no dependencies manager is used so need to `go get -u` the following:  
-- github.com/mattn/go-runewidth
-- 
+For testing purposes execute `make build` which compiles the binary into `releases/powerline-go` and then execute `./generatePreview.sh`
 
 If you want to change the colours this page has a useful colour chart: https://medium.com/@inhereat/terminal-color-rendering-tool-library-support-8-16-colors-256-colors-by-golang-a68fb8deee86.
 The default colours are defined in defaults.go
 
+## Releasing
+goreleaser (https://goreleaser.com/) is used to generate new releases and push them to Github. It also generates the 
 ## License
 
 > This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.  

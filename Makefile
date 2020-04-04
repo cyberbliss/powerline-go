@@ -1,3 +1,4 @@
+VERSION := $(shell git describe --abbrev=0 --tags)
 # Go related commands
 GOCMD=go
 GOBUILD=$(GOCMD) build
@@ -17,9 +18,9 @@ GOARCH = amd64
 
 .PHONY: build
 build:
-	$(GOBUILD) -o release/$(BINARY)
+	$(GOBUILD) -o release/$(BINARY) -ldflags="-X main.version=${VERSION}"
 
-# bin creates a platform specific statically linked binary. Platform sepcific because if you are on
+# bin creates a platform specific statically linked binary. Platform specific because if you are on
 # OS-X; linux binary will not work.
 .PHONY: bin
 bin:
