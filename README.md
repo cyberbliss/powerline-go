@@ -370,7 +370,14 @@ If you want to change the colours this page has a useful colour chart: https://m
 The default colours are defined in defaults.go
 
 ## Releasing
-goreleaser (https://goreleaser.com/) is used to generate new releases and push them to Github. It also generates the 
+goreleaser (https://goreleaser.com/) is used to generate new releases and push them to Github. It also generates the homebrew tap formula.
+1. Make/test changes in a feature branch
+2. PR and merge into master
+3. Switch to master and git pull locally
+4. `git tag -a vn.n.n` where n.n.n obeys semver standards
+5. `git push origin vn.n.n`
+6. `goreleaser --rm-dist`
+
 ## License
 
 > This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.  
