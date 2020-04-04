@@ -25,6 +25,10 @@ const (
 	MinInteger              = ^MaxInteger
 )
 
+var (
+	version string
+)
+
 type segment struct {
 	content             string
 	foreground          uint8
@@ -62,6 +66,7 @@ type args struct {
 	Duration              *string
 	Eval                  *bool
 	Condensed             *bool
+	Version				  *bool
 }
 
 func (s segment) computeWidth(condensed bool) int {
@@ -259,8 +264,16 @@ func main() {
 			"condensed",
 			false,
 			comments("Remove spacing between segments")),
+		Version: flag.Bool(
+			"version",
+			false,
+			comments("Show version number and then exit")),
 	}
 	flag.Parse()
+	if *args.Version {
+		println("powerline-go " + version)
+		return
+	}
 	if strings.HasSuffix(*args.Theme, ".json") {
 		jsonTheme := themes["default"]
 
