@@ -129,7 +129,6 @@ func segmentGit(p *powerline) {
 	if len(p.ignoreRepos) > 0 {
 		out, err := runGitCommand("git", "rev-parse", "--show-toplevel")
 		if err != nil {
-			panic(err)
 			return
 		}
 		out = strings.TrimSpace(out)
@@ -140,7 +139,6 @@ func segmentGit(p *powerline) {
 
 	out, err := runGitCommand("git", "status", "--porcelain", "-b", "--ignore-submodules")
 	if err != nil {
-		panic(err)
 		return
 	}
 
