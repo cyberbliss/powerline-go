@@ -10,7 +10,8 @@ Forked from this lovely version: (https://github.com/justjanne/powerline-go).
 - Changes color if the last command exited with a failure code
 - If you're too deep into a directory tree, shortens the displayed path with an ellipsis
 - Shows the current Python [virtualenv](http://www.virtualenv.org/) environment
-- Shows if you are in a [nix](https://nixos.org/) shell
+- Shows which Kubernetes cluster and namespace you're in
+- Many other display options
 - It's easy to customize and extend. See below for details.
 
 **Table of Contents**
@@ -18,6 +19,7 @@ Forked from this lovely version: (https://github.com/justjanne/powerline-go).
 - [Version Control](#version-control)
 - [Installation](#installation)
   - [Precompiled Binaries](#precompiled-binaries)
+  - [Homebrew](#homebrew)
   - [Other Platforms](#other-platforms)
   - [Bash](#bash)
   - [ZSH](#zsh)
@@ -57,7 +59,7 @@ but you may have to set your $TERM to `xterm-256color` for it to work.
 If you want to use the "patched" mode (which is the default, and provides
 improved UI), you'll need to install a powerline font, either as fallback,
 or by patching the font you use for your terminal: see
-[powerline-fonts](https://github.com/Lokaltog/powerline-fonts).  
+[Nerd Fonts](https://nerdfonts.com).  
 Alternatively you can use "nopowerline" mode.
 
 ### Precompiled Binaries
@@ -88,7 +90,7 @@ Add the following to your `.bashrc` (or `.profile` on Mac):
 
 ```bash
 function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -error $?)"
+    PS1="$($GOPATH/bin/powerline-go -error $? -modules user,cwd,perms,git)"
 }
 
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
@@ -104,7 +106,7 @@ Add the following to your `.zshrc`:
 
 ```bash
 function powerline_precmd() {
-    PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh)"
+    PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh -modules user,cwd,perms,git)"
 }
 
 function install_powerline_precmd() {
