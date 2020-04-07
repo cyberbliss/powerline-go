@@ -90,7 +90,7 @@ Add the following to your `.bashrc` (or `.profile` on Mac):
 
 ```bash
 function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -error $? -modules user,cwd,perms,git)"
+    PS1="$(powerline-go -error $? -modules user,cwd,perms,git)"
 }
 
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
@@ -106,7 +106,7 @@ Add the following to your `.zshrc`:
 
 ```bash
 function powerline_precmd() {
-    PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh -modules user,cwd,perms,git)"
+    PS1="$(powerline-go -error $? -shell zsh -modules user,cwd,perms,git)"
 }
 
 function install_powerline_precmd() {
@@ -129,7 +129,7 @@ Redefine `fish_prompt` in `~/.config/fish/config.fish`:
 
 ```bash
 function fish_prompt
-    $GOPATH/bin/powerline-go -error $status -shell bare
+    powerline-go -error $status -shell bare
 end
 ```
 ### Nix
